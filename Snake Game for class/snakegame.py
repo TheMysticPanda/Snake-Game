@@ -112,9 +112,12 @@ def whether_snake_dies():
       print("You lose! Your score is", score)
       
    ##The second part of the function checks if the snake touches the border, thereby ending the game
-   if snake_head_x_coords+20==(width) or snake_head_x_coords==(-width): #or snake_head_y_coords-20==(length-325) or snake_head_y_coords==(-length+325):
+   if snake_head_x_coords+20==(width) or snake_head_x_coords==(-width): 
          gameover=True
          print("You lose! Your score is", score)
+   if snake_head_y_coords+20>(length-325) or snake_head_y_coords-20<(-length+325):
+        gameover=True
+        print("You lose! Your score is", score)
 
 def food_position():
    global food_coords_for_egg
